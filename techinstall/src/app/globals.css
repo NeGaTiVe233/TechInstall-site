@@ -1,0 +1,210 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+
+}
+
+body {
+    height: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
+.quiz-page {
+    height: 100vh; /* Применим эту высоту для страницы квиза */
+}
+.hover-zoom {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Анимация fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* Заголовок */
+.options-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 3vh;
+}
+
+/* Карточка */
+.options-card {
+    margin-top: 2rem;
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Ховер-эффект: оранжевая тень */
+.options-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(255, 102, 0, 0.5);
+}
+
+/* Изображение в карточке */
+.options-image {
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Описание */
+.options-description {
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+/* Дополнительный текст */
+.options-additional {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1vh;
+    color: rgba(58, 58, 58, 0.8);
+}
+
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+    background-color: #fca21b;
+}
+/* Настройка контейнера карусели */
+.carousel-container {
+    position: relative; /* Удерживаем точки в пределах карусели */
+    overflow: hidden;
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(255, 165, 0, 1) !important; /* Полупрозрачный оранжевый */
+    color: white !important; /* Белый текст */
+    border-color: rgba(255, 165, 0, 0.7) !important; /* Полупрозрачная граница */
+    box-shadow: none !important; /* Убираем синюю рамку */
+}
+
+.accordion-button:not(.collapsed):focus {
+    outline: none !important; /* Убираем фокусировку */
+    box-shadow: none !important; /* Убираем синюю тень */
+}
+
+.button {
+    @apply px-4 py-2 text-lg font-bold text-black border border-black rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-yellow-600;
+    background-color: #fca21b;
+}
+
+.header {
+    transition: height 0.3s ease, padding 0.3s ease; /* Плавный переход */
+    height: 70px; /* Начальная высота */
+    padding: 10px 20px !important;
+}
+.header.shrink {
+    height: 60px; /* Сжатая высота */
+    padding: 5px 15px;
+}
+
+@media (max-width:1050px){
+    .header-button{
+        height: 3.75rem !important;
+    }
+
+}
+
+@media (max-width: 888px) {
+
+    h1 {
+        font-size: 50px; 
+    }
+    .h2-text{
+      font-size: 20px !important;
+    }
+
+    h2 {
+        font-size: 15px !important; 
+        padding-left: 10px;
+        /* Добавляем отступы для текста */
+    }
+    p{
+        padding-left: 10px;
+    }
+
+    .header-button{
+        height: 3.75rem;
+    }
+
+    .quiz-container {
+        height: auto;
+    }
+
+    .quiz-background {
+        background-position: center;
+        background-size: cover;
+
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    .header.shrink {
+        height: 60px; /* Сжатая высота */
+        padding: 5px 20px;
+    }
+    .header .part1 h2 {
+        display: none; /* Скрыть текст рабочего времени */
+    }
+
+    .header .part2 button:first-child {
+        display: none; /* Скрыть кнопку с телефоном */
+    }
+
+    h1 {
+        font-size: 37px;
+        white-space: nowrap;
+
+        /* Еще больше для очень маленьких экранов */
+    }
+    .adaptive-card{
+        height: 20vh !important;
+    }
+    .card {
+        width: 90% !important;  /* Увеличиваем размер карточки для маленьких экранов */
+        max-width: 400px; /* Ограничиваем максимальный размер карточки */
+        margin: 0 auto; /* Центрируем карточки */
+    }
+    .adaptive{
+        width: 90% !important;
+    }
+    .image-responsive {
+        height: 2rem; /* Уменьшаем высоту изображений на мобильных устройствах */
+    }
+    h2 {
+        font-size: 17px; /* Еще больше для очень маленьких экранов */
+    }
+    .header {
+        flex-direction: row; /* Переводим заголовок и описание в колонку */
+        align-items: center; /* Центрируем по горизонтали */
+    }
+
+
+}

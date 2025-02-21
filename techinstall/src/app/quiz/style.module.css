@@ -1,0 +1,131 @@
+/* style.module.css */
+.radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.radio:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.radio:hover {
+    border-color: #007BFF;
+}
+
+.radio:disabled {
+    border-color: #ccc;
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+.question-container {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.question-container.fade-out {
+    opacity: 0;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+
+}
+
+.quiz-modal {
+    text-align: center;
+    position: absolute;
+    height: 100vh;
+    width: 24rem;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20vh;
+    overflow-x: hidden;
+    color: white;
+    border-radius: 10px;
+    z-index: 1;
+
+
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+.answer-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Новые стили для прогресс-бара */
+.progressContainer {
+    position: relative;
+    width: 80%;
+    height: 4px;
+    margin: 20px 0;
+}
+
+.progressBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.progressFill {
+    position: absolute;
+    height: 100%;
+    background-color: rgb(207, 148, 26);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+    z-index: 1;
+}
+
+.progressDots {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: -6px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    background-color: #cf941a;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+
+
+/* Стиль для радиокнопки */
+
