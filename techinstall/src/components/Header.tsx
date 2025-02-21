@@ -37,7 +37,6 @@ export default function Header() {
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
             }}
         >
-            {/* Логотип */}
             <div className="flex items-center gap-4 cursor-pointer" onClick={handleHome} >
                 <Image
                     src="/Images/icons/logo.webp"
@@ -50,7 +49,6 @@ export default function Header() {
             </div>
 
             <div>
-                {/* Меню для десктопа */}
                 <div className="hidden md:flex gap-4" style={{marginTop:"0.5rem",paddingRight:"4rem"}}>
                 <ul className="flex space-x-10">
                     <li> <a href={"#aboutUs"} style={{textDecoration:"none",color:"black"}}>О нас</a></li>
@@ -61,21 +59,18 @@ export default function Header() {
                 </div>
 
             </div>
-            {/* Меню для десктопа */}
             <div className="hidden md:flex gap-4">
                 <button className="header-button px-4 border-2 border-black rounded-lg">+79653824322</button>
                 <button className="header-button px-3 py-2 border-2 border-black rounded-lg">Закажи сейчас</button>
             </div>
 
 
-            {/* Бургер-меню */}
             <div className="md:hidden flex items-center">
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                 </button>
             </div>
 
-            {/* Мобильное меню */}
             <div
                 className={`fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
                 style={{ zIndex: 40 }}

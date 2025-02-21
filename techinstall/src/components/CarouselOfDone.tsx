@@ -14,7 +14,7 @@ export default function PhotoCarousel() {
             setVisibleCount(window.innerWidth >= 768 ? 4 : 1);
         };
 
-        handleResize(); // Устанавливаем начальное значение
+        handleResize(); 
         window.addEventListener("resize", handleResize);
 
         return () => window.removeEventListener("resize", handleResize);
@@ -35,7 +35,6 @@ export default function PhotoCarousel() {
 
     return (
         <div className="relative w-screen mx-auto mt-12 bg-gray-800" style={{ paddingTop: "3vh",paddingBottom:"2vh",backgroundColor: "#f0f0f0"}}>
-            {/* Карусель */}
             <div className="flex overflow-hidden">
                 {visibleImages.map((image, index) => (
                     <div key={index} className="flex-shrink-0 w-full md:w-1/4 px-1">
@@ -48,7 +47,6 @@ export default function PhotoCarousel() {
                 ))}
             </div>
 
-            {/* Кнопка назад */}
             <button
                 onClick={prevSlide}
                 className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 shadow-md hover:bg-gray-600"
@@ -56,7 +54,6 @@ export default function PhotoCarousel() {
                 ❮
             </button>
 
-            {/* Кнопка вперед */}
             <button
                 onClick={nextSlide}
                 className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 shadow-md hover:bg-gray-600"
@@ -64,7 +61,6 @@ export default function PhotoCarousel() {
                 ❯
             </button>
 
-            {/* Индикаторы */}
             <div className="flex justify-center mt-4 space-x-2">
                 {listImages.map((_, index) => (
                     <button

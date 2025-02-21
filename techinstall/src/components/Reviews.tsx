@@ -1,17 +1,15 @@
-"use client"; // Указываем, что компонент работает только на клиенте
+"use client"; 
 
 import React, { useEffect } from 'react';
 
 export default function Reviews() {
     useEffect(() => {
-        // Динамически загружаем скрипт Elfsight после монтирования компонента
         const script = document.createElement('script');
         script.src = 'https://static.elfsight.com/platform/platform.js';
         script.async = true;
         document.body.appendChild(script);
 
         return () => {
-            // Удаляем скрипт при размонтировании компонента
             document.body.removeChild(script);
         };
     }, []);

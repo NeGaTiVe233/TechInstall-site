@@ -12,7 +12,6 @@ export default function WhatCare() {
     return (
         <div className="container mt-5">
             <div className="row">
-                {/* Текстовая часть */}
                 <div className="col-md-6 d-flex flex-col items-center justify-center">
                     <strong style={{ fontSize: "1.7em", marginBottom: "1rem" }}>
                         Что для нас важно?
@@ -23,7 +22,7 @@ export default function WhatCare() {
                             paddingRight:"7vh",
                             fontSize: "1rem",
                             textAlign: "center",
-                            maxHeight: isExpanded ? "none" : "10rem", // Ограничение высоты
+                            maxHeight: isExpanded ? "none" : "10rem", 
                             overflow: "hidden",
                         }}
                     >
@@ -46,7 +45,6 @@ export default function WhatCare() {
                     </button>
                 </div>
 
-                {/* Форма */}
                 <div className="col-md-6">
                     <div
                         className="bg-light p-4 rounded shadow-sm"

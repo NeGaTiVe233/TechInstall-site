@@ -31,13 +31,11 @@ export default function Characteristics() {
                         width: "40vh",
                     }}
                 >
-                    {/* Изображение */}
                     <Image src={c.src} alt={c.alt} width={70} height={50} />
 
-                    {/* Текст */}
                     <div
                         style={{
-                            textAlign: "left", // Выравнивание текста по левому краю
+                            textAlign: "left", 
                             display: "flex",
                             flexDirection: "column", // Расположение заголовка и описания в столбик
                             alignItems: "flex-start", // Выровнять текст по левому краю

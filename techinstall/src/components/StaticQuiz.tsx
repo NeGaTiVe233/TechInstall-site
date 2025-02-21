@@ -5,7 +5,7 @@ export default function Quiz() {
 		<div
 			style={{
 				width: "100%",
-				height: "46rem", // По умолчанию
+				height: "46rem", 
 				position: "relative",
 
 			}}
@@ -26,7 +26,6 @@ export default function Quiz() {
 				}}
 			/>
 
-			{/* Белый прозрачный слой */}
 			<div
 				style={{
 					position: "absolute",
@@ -56,14 +55,13 @@ export default function Quiz() {
 			fontSize: "55px",
 			zIndex: 2,
 			...(typeof window !== "undefined" && window.innerWidth < 768
-				? { marginTop: "8vh" } // Увеличенный отступ
+				? { marginTop: "8vh" } 
 				: {}),
 		}}
 	>
 		<h1 className={"display-4"}>TechInstall</h1>
 	</div>
 
-	{/* Описание */}
 	<div
 		className="desc"
 		style={{
@@ -135,7 +133,6 @@ export default function Quiz() {
 		</Link>
 	</div>
 </div>
-			{/* Заголовок */}
 		</div>
 	);
 }

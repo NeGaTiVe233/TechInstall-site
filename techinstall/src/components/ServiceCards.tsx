@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-// Импортируем список профилей
 import { listProfiles } from "@/constans/listProfilesWork";
 
 // Динамическая загрузка слайдера
@@ -18,12 +17,12 @@ export default function ServiceCards() {
         infinite: false,
         speed: 500,
         slidesToScroll: 1,
-        slidesToShow: 4, // Показывать 5 слайдов на экране
+        slidesToShow: 4, 
         focusOnSelect: true,
-        dots: true, // Включаем точки
+        dots: true, 
         responsive: [
             {
-                breakpoint: 768, // Для мобильных устройств
+                breakpoint: 768, 
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
